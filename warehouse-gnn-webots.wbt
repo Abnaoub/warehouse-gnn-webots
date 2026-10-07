@@ -1,0 +1,297 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/factory/containers/protos/WoodenBox.proto"
+
+WorldInfo {
+  info [
+    "Warehouse arena for AGV/AMR multi-robot routing (Webots port of the Gazebo world)"
+  ]
+  title "Warehouse Arena"
+  basicTimeStep 16
+}
+Viewpoint {
+  orientation -0.42943838573199344 0.41780615557970513 0.8006376766175864 1.7934369166076118
+  position -0.9598455404266829 -13.828350607339576 20.078941202812967
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 12 8
+  floorTileSize 12 8
+  floorAppearance PBRAppearance {
+    baseColor 0.62 0.62 0.62
+    roughness 1
+    metalness 0
+  }
+  wallThickness 0.1
+  wallHeight 0.6
+  wallAppearance PBRAppearance {
+    baseColor 0.97 0.97 0.97
+    roughness 1
+    metalness 0
+  }
+}
+DEF ZONE_LEFT Pose {
+  translation -3 0 0.002
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.75 0.75 0.75
+        roughness 1
+        metalness 0
+      }
+      geometry Cylinder {
+        height 0.002
+        radius 1.4
+      }
+    }
+  ]
+}
+DEF ZONE_CENTER Pose {
+  translation 0 0 0.002
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.75 0.75 0.75
+        roughness 1
+        metalness 0
+      }
+      geometry Cylinder {
+        height 0.002
+        radius 1.4
+      }
+    }
+  ]
+}
+DEF ZONE_RIGHT Pose {
+  translation 3 0 0.002
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.75 0.75 0.75
+        roughness 1
+        metalness 0
+      }
+      geometry Cylinder {
+        height 0.002
+        radius 1.4
+      }
+    }
+  ]
+}
+DEF PAD_ORANGE_L Pose {
+  translation -4.8 3.2 0.005
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 1 0.6 0
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.8 0.4 0.01
+      }
+    }
+  ]
+}
+DEF PAD_ORANGE_R Pose {
+  translation 4.8 3.2 0.005
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 1 0.6 0
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.8 0.4 0.01
+      }
+    }
+  ]
+}
+DEF PAD_YELLOW_1 Pose {
+  translation -5.1 1 0.005
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 1 1 0
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 1 0.7 0.01
+      }
+    }
+  ]
+}
+DEF PAD_YELLOW_2 Pose {
+  translation -5.1 -1.4 0.005
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 1 1 0
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 1 0.7 0.01
+      }
+    }
+  ]
+}
+DEF PAD_GREEN_1 Pose {
+  translation 5.1 1 0.005
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0.9 0
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 1 0.7 0.01
+      }
+    }
+  ]
+}
+DEF PAD_GREEN_2 Pose {
+  translation 5.1 -1.4 0.005
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0.9 0
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 1 0.7 0.01
+      }
+    }
+  ]
+}
+WoodenBox {
+  translation -3.4 2.8 0.4
+  name "shelf_c1_r1"
+  size 0.4 0.6 0.8
+}
+WoodenBox {
+  translation -3.4 1.6 0.4
+  name "shelf_c1_r2"
+  size 0.4 0.6 0.8
+}
+WoodenBox {
+  translation -3.4 0.3 0.4
+  name "shelf_c1_r3"
+  size 0.4 0.6 0.8
+}
+WoodenBox {
+  translation -3.4 -1.2 0.4
+  name "shelf_c1_r4"
+  size 0.4 0.6 0.8
+}
+WoodenBox {
+  translation -3.4 -3.2 0.4
+  name "shelf_c1_r5"
+  size 0.4 0.6 0.8
+}
+WoodenBox {
+  translation -1.4 2.8 0.4
+  name "shelf_c2_r1"
+  size 0.4 0.6 0.8
+}
+WoodenBox {
+  translation -1.4 1.6 0.4
+  name "shelf_c2_r2"
+  size 0.4 0.6 0.8
+}
+WoodenBox {
+  translation -1.4 0.3 0.4
+  name "shelf_c2_r3"
+  size 0.4 0.6 0.8
+}
+WoodenBox {
+  translation -1.4 -1.2 0.4
+  name "shelf_c2_r4"
+  size 0.4 0.6 0.8
+}
+WoodenBox {
+  translation -1.4 -3.2 0.4
+  name "shelf_c2_r5"
+  size 0.4 0.6 0.8
+}
+WoodenBox {
+  translation 1.4 2.8 0.4
+  name "shelf_c3_r1"
+  size 0.4 0.6 0.8
+}
+WoodenBox {
+  translation 1.4 1.6 0.4
+  name "shelf_c3_r2"
+  size 0.4 0.6 0.8
+}
+WoodenBox {
+  translation 1.4 0.3 0.4
+  name "shelf_c3_r3"
+  size 0.4 0.6 0.8
+}
+WoodenBox {
+  translation 1.4 -1.2 0.4
+  name "shelf_c3_r4"
+  size 0.4 0.6 0.8
+}
+WoodenBox {
+  translation 1.4 -3.2 0.4
+  name "shelf_c3_r5"
+  size 0.4 0.6 0.8
+}
+WoodenBox {
+  translation 3.4 2.8 0.4
+  name "shelf_c4_r1"
+  size 0.4 0.6 0.8
+}
+WoodenBox {
+  translation 3.4 1.6 0.4
+  name "shelf_c4_r2"
+  size 0.4 0.6 0.8
+}
+WoodenBox {
+  translation 3.4 0.3 0.4
+  name "shelf_c4_r3"
+  size 0.4 0.6 0.8
+}
+WoodenBox {
+  translation 3.4 -1.2 0.4
+  name "shelf_c4_r4"
+  size 0.4 0.6 0.8
+}
+WoodenBox {
+  translation 3.4 -3.2 0.4
+  name "shelf_c4_r5"
+  size 0.4 0.6 0.8
+}
+DEF PILLAR_B1 Solid {
+  translation -2.6 3.5 0.6
+  children [
+    DEF PILLAR_SHAPE Shape {
+      appearance PBRAppearance {
+        baseColor 0.08 0.08 0.1
+        roughness 0.6
+        metalness 0
+      }
+      geometry Cylinder {
+        height 1.2
+        radius 0.06
+      }
+    }
+  ]
+  name "pillar_b1"
+  boundingObject Cylinder {
+    height 1.2
+    radius 0.06
+  }
+}
